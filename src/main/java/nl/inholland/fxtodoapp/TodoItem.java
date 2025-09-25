@@ -1,7 +1,12 @@
 package nl.inholland.fxtodoapp;
 
-// TODO: Make class serializable
-public class TodoItem {
+import java.io.Serial;
+import java.io.Serializable;
+
+public class TodoItem implements Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 1L;
 
     private String description;
     private boolean completed;
